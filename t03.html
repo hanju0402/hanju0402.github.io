@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .main_visual {
+        padding: 100px 0;
+        background: #ddd;
+        text-align: center;
+      }
+
+      .main_visual h2 {
+        font-size: 30px;
+        margin: 0 0 20px 0;
+      }
+
+      .main_visual p {
+        font-size: 15px;
+        margin: 0 0 30px 0;
+      }
+
+      .main_visual .container {
+        display: flex;
+        gap: 30px;
+        width: 1200px;
+        margin: 0 auto;
+      }
+
+      .main_visual .container figure {
+        width: 100%;
+      }
+
+      .main_visual .container span {
+        position: absolute;
+        top: 200px;
+        left: 300px;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        color: rgb(12, 16, 221);
+        background: rgb(173, 202, 25);
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+
+      .main_visual .container span:hover {
+        border-radius: 0;
+        left: 400px;
+      }
+
+      .main_visual .container figure {
+        overflow: hidden;
+      }
+
+      .main_visual .container figure {
+        transition: 0.5s;
+      }
+
+      .main_visual .container figure:hover {
+        transform: scale(1.8);
+      }
+      .mopen {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        background: #333;
+        width: 100px;
+        height: 100px;
+      }
+      .mopen > span {
+        position: absolute;
+        width: 60px;
+        left: 20px;
+        height: 5px;
+        background: #fff;
+      }
+      .mopen > span:nth-child(1) {
+        top: 20px;
+      }
+      .mopen > span:nth-child(2) {
+        top: 40px;
+      }
+      .mopen > span:nth-child(3) {
+        top: 40px;
+      }
+      .mopen > span:nth-child(4) {
+        top: 60px;
+      }
+
+      .mopen.oo > span:nth-child(1) {
+        display: none;
+      }
+      .mopen.oo > span:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      .mopen.oo > span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      .mopen.oo > span:nth-child(4) {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="main_visual">
+      <h2>Lorem ipsum dolor sit.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+        Sed at cumque magni?
+      </p>
+      <div class="container">
+        <span>축구</span>
+        <figure><img src=https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTEyMjNfNjgg%2FMDAxNjQwMjU3NTc4OTQ1.9Hnv11qCwNfLkpD8CgJw6lYAqcdRcysczFexrw1IULYg.ZDlsIaSGDiaMpgHuz5NVog8VWIPe0BcU940gPeREPrIg.JPEG.blueskyever%2F_AVC8390Thumb%252C7.jpg&type=sc960_832 " alt=""></figure>
+        <figure><img src=https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MThfMTky%2FMDAxNjUwMjMzMDIwNDY0.TFR-4qTRQgRI7DQiM6Xvst4gMI5QybuIqTV-R0CPtvkg.sSPTAMWorIR3mpifRQcImNmgzs1TE6qoxnpLheBiRXUg.JPEG.pp2k919106%2F%25B4%25D9%25BF%25EE%25B7%25CE%25B5%25E5_%25281%2529.jpeg&type=sc960_832 " alt=""></figure>
+        <figure><img src=https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMDA0MjZfMTQy%2FMDAxNTg3OTA5MzM3ODcw.X4FjhMvpNQRKkrnz7ZZ-Wr1MfH5P0TiCuE1kkkQrXkcg.Epsf6-tfCr8NRWNc0uVfbPtlLz451gj3F4NzRW9YjMgg.JPEG%2FexternalFile.jpg&type=sc960_832 " alt=""></figure>
+
+      </div>
+      <div></div>
+      <span>001</span>
+    </section>
+    <div class="mopen oo">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <script>
+      document.querySelector(".mopen").addEventListener("click", function () {
+        console.log("찍네~~~");
+        //자기에게 oo 클랙스를 붙여줘
+        this.classList.toggle("oo");
+      });
+    </script>
+  </body>
+</html>
