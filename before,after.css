@@ -1,0 +1,23 @@
+.before h3 {
+    margin: 50px 50px 50px 50px;
+}
+.before h3::before {
+    content:"";
+    display: block;
+    width:1px;
+    height: 50px;
+    background:rgb(22, 200, 76);
+    margin: -40px -20px;
+}
+
+.after h3{
+    margin: 50px 50px 50px 50px;
+}
+.after h3::after {
+    content:"";
+    display:block;
+    width: 1px;
+    height: 50px;
+    background: rgb(22, 200, 76);
+    margin: -40px 250px;
+}

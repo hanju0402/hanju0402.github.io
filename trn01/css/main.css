@@ -49,18 +49,22 @@
 
 .main_slider {
   position:absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 40%;
   transform: translate(-50%, -50%);
   width: 1200px;
   
 }
 
 .main_slider h3 {
-  font-size: 60px;
-  font-weight: 900;
-  margin: 0 0 30px 0;
-  color: #00f;
+  font-size: 100px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  line-height: 110px;
+  background: linear-gradient(to right top, rgb(48, 152, 226) 10%, rgb(1, 9, 22) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 
 }
 
@@ -80,7 +84,7 @@
   display: inline-block;
   margin: 0 10px 0 0;
   width: 50px;
-  height: 4px;
+  height: 10px;
   background: #333;
 }
 
@@ -90,5 +94,200 @@
 
 .main_slider .slick-dots button {
   display: none;
+}
+
+.main_banner {
+  transform: translateY(-50%);
+}
+
+.main_banner figure {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.main_banner figure:nth-child(1) {
+  background: #d25348;
+ 
+}
+
+.main_banner figure:nth-child(2) {
+  background: #f0ca42;
 
 }
+.main_banner figure:nth-child(3) {
+  background: #3e768a;
+
+}
+.main_banner figure:nth-child(4) {
+  background: #75a474;
+
+}
+
+.main_banner figure:nth-child(1):hover {
+  transform-origin: bottom center;
+  transform: scaleY(1.1);
+  transition: transform 0.5s;
+}
+.main_banner figure:nth-child(2):hover {
+  transform-origin: bottom center;
+  transform: scaleY(1.1);
+  transition: transform 0.5s;
+}
+.main_banner figure:nth-child(3):hover {
+  transform-origin: bottom center;
+  transform: scaleY(1.1);
+  transition: transform 0.5s;
+}
+.main_banner figure:nth-child(4):hover {
+  transform-origin: bottom center;
+  transform: scaleY(1.1);
+  transition: transform 0.5s;
+}
+
+.main_banner figure a {
+  display:flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100px;
+  height: 120px;
+  font-size: 13px;
+}
+
+.main_banner figure:nth-child(1) a{
+  background: url(../img/icon_set_w.png) no-repeat 0 0;
+}
+
+.main_banner figure:nth-child(2) a{
+  background: url(../img/icon_set_w.png) no-repeat -100px 0;
+}
+.main_banner figure:nth-child(3) a{
+  background: url(../img/icon_set_w.png) no-repeat -200px 0;
+}
+.main_banner figure:nth-child(4) a{
+  background: url(../img/icon_set_w.png) no-repeat -300px 0;
+}
+
+.main_banner .customer {
+  position: relative;
+  flex: 2;
+  text-align: right;
+  background: #dddddd;
+  padding: 50px 30px 0 0;
+}
+.main_banner .customer a {
+  display: block;
+  margin: 0 0 15px 0;
+  font-size: 38px;
+  color: #369;
+  font-weight: 700;
+}
+
+.main_banner .customer i {
+  position:absolute;
+  top: -29px;
+  right: 30px;
+  color: #fff;
+  background: #d25348;
+  font-size: 38px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.main_link {
+  padding: 0 0 100px 0;
+  background: linear-gradient(to top, #f7f7f7 70%, transparent 30%);
+}
+
+.main_link .container {
+  gap: 30px;
+}
+
+.main_link figure{
+  position: relative;
+  flex: 1;
+  border-radius: 50px 0 0 0;
+  overflow: hidden;
+/* 먼지 알아보기 */
+}
+
+.main_link img{
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+
+.main_link h3 {
+  font-size: 23px;
+  margin: 0 0 30px 0;
+}
+
+.main_link h3::after {
+  content:"";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #f00;
+  margin: 15px 0;
+}
+
+.main_link figure a {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: rgba(243, 202, 79, 0.5);
+  text-align: center;
+  line-height: 60px;
+  /* 글자 높이 */
+  color: #fff;
+  border-radius: 50%;
+  text-transform: uppercase;
+  /* 글씨체 */
+  transition: 0.5s;
+  /* 변하는속도 */
+
+}
+
+.main_link p {
+  font-size: 13px;
+}
+
+.main_link figure a:hover {
+  background: rgba(243, 202, 79, 1);
+  border-radius: 5px;
+  /* 박스를 모서리 각도조절(둥글게만들수있음) */
+}
+
+.footer {
+  border-top: 1px solid #ddd;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer ul {
+  margin: 10px 0;
+}
+
+.footer ul>li {
+  display: inline-block;
+}
+
+.footer ul>li~li::before {
+  content:"";
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background: #333;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
+.footer address {
+  font-style: normal;
+}
+

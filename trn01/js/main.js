@@ -9,6 +9,5 @@ $(function(){
         autoplaySpeed: 1000,
         vertical: true,
         dots: true,
-
     });
 })
