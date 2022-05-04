@@ -277,9 +277,6 @@
 /*  
 이한주 만듬. 2022. 05. 04 responsive 768 */
 
-
-
-
 @media (max-width: 768px) {
   .container {
     display: flex;
@@ -369,11 +366,15 @@
     text-align: center;
   }
 
+  .main_slider .itm {
+    height: 250px;
+  }
+
   .main_slider h3 {
-    font-size: 11vw;
-    font-weight: 900;
+    font-size: 13vw;
+    font-weight: 800;
     margin: 0 0 20px 0;
-    line-height: 120px;
+    line-height: 100px;
     background: linear-gradient(
       to right top,
       rgb(48, 152, 226) 10%,
@@ -385,7 +386,7 @@
 
   .main_slider strong {
     display: block;
-    margin: 0 0 15px 0;
+    margin: auto 0 15px 0;
     color: #fd7e14;
   }
 
