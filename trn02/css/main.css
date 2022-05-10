@@ -214,7 +214,7 @@ nav > ul > li ~ li::before {
 }
 
 .basic {
-  padding: 100px 0;
+  padding: 120px 0;
   /* 아래위로 100px 양옆으로 0 */
   text-align: center;
 }
@@ -223,23 +223,24 @@ nav > ul > li ~ li::before {
   gap: 30px;
 }
 
-section h2 {
+.basic h2 {
   font-size: 18px;
   font-weight: lighter;
   letter-spacing: 10px;
   margin: 0 0 10px 0;
 }
 
-section p {
+.basic p {
   font-size: 14px;
   font-weight: lighter;
-  margin: 0 0 30px 0;
+  margin: 0 0 50px 0;
 }
 
 .basic figure {
   flex: 1;
   overflow: hidden;
 }
+
 .basic figure .inbox {
   overflow: hidden;
   border-radius: 50% 50% 51% 49% / 66% 66% 34% 34%;
@@ -294,6 +295,19 @@ section p {
     vertical-align: middle;
 }
 
+.dec h2 {
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    margin: 0 0 10px 0;
+  }
+  
+.dec p {
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0 0 50px 0;
+  }
+
 .movie {
     padding: 100px 0;
 }
@@ -338,6 +352,101 @@ section p {
     font-size: 25px;
     cursor: pointer;
 }
+
+.sub_slider {
+    position: relative;
+    width: 1200px;
+    text-align: center;
+    margin: 100px auto;
+}
+
+.sub_slider h2 {
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    margin: 0 0 10px 0;
+  }
+  
+.sub_slider p {
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0 0 50px 0;
+  }
+
+.sub_slider .slidebox  figure img {
+    width: 200px;
+    height: 200px;
+    margin: 0 0 10px 0;
+
+}
+
+.sub_slider .slidebox figure strong {
+    display: block;
+    margin: 0 30px 20px 0;
+    padding: 0 15px 0 0 ;
+
+
+}
+
+
+.slidebox .slick-dots {
+    position: absolute;
+    margin: 15px 0 0 0;
+    left: 43%;
+  }
+  
+.slidebox .slick-dots li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    background: #333;
+    border-radius: 50%;
+  }
+
+.slidebox .slick-dots li.slick-active {
+    background: #f00;
+  } 
+
+.slidebox .slick-dots button {
+    display: none;
+  }
+
+
+.sub_slider i.xi-arrow-left {
+    position: absolute;
+    top: 160px;
+    left: -120px;
+    color: #fff;
+    background: #000;
+    font-size: 40px;
+    padding: 11px;
+    border-radius: 50%;
+}
+
+.sub_slider i.xi-arrow-right {
+    position: absolute;
+    top: 160px;
+    right: -80px;
+    color: #fff;
+    background: #000;
+    font-size: 40px;
+    padding: 11px;
+    border-radius: 50%;
+}
+
+
+
+/* .sub_visual i { 
+    width: ;
+    padding: 10px;
+    color: #f1f1f1;
+    background: #333;
+    margin: 5px 0 0 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}*/
+  
 
 /* .middel { 
   text-align: center;
