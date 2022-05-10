@@ -34,6 +34,7 @@ $(function(){
               opacity:1,
               showControls: false,
               playOnlyIfVisible: true,
+              vol: 1,
     });
 
     $('.utube i:nth-of-type(2)').on('click', function(){
@@ -44,6 +45,22 @@ $(function(){
         $('#myMovie').YTPPause();
     });
 
+    $('.sub_slider i.xi-arrow-left').on('click', function(){
+        $('.slidebox').slick('slickPrev');
+    });
+
+    $('.sub_slider i.xi-arrow-right').on('click', function(){
+        $('.slidebox').slick('slickNext');
+    });
+
+    $('.slidebox').slick({
+
+       
+        arrows: false,
+        dots: true,
+        slidesToShow:5,
+ 
+    })
 
 
     /////////////////////////////////////
