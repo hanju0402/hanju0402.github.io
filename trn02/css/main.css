@@ -284,76 +284,310 @@ nav > ul > li ~ li::before {
 }
 
 .fixed_bg i {
-    padding: 10px;
-    background: #333;
-    margin: 5px 0 0 20px;
-    border-radius: 50%;
-    vertical-align: middle;
+  padding: 10px;
+  background: #333;
+  margin: 5px 0 0 20px;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 
 .fixed_bg span {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .dec h2 {
-    font-size: 18px;
-    font-weight: lighter;
-    letter-spacing: 10px;
-    margin: 0 0 10px 0;
-  }
-  
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 10px;
+  margin: 0 0 10px 0;
+}
+
 .dec p {
-    font-size: 14px;
-    font-weight: lighter;
-    margin: 0 0 50px 0;
-  }
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0 0 50px 0;
+}
 
 .movie {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 .movie .container {
-    gap:50px;
+  gap: 50px;
 }
 
 .movie .container figure {
-    flex: 1;
+  flex: 1;
 }
 
 .movie .container .dec {
-    flex: 1;
-    padding: 100px 0;
+  flex: 1;
+  padding: 100px 0;
 }
 
 .movie video {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .movie .dec i {
-
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border-radius: 50%;
-    margin: 0 8px 0 0 ;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 8px 0 0;
 }
 
 .utube {
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    filter: grayscale(1);
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  filter: grayscale(1);
 }
 
 .utube i {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin: 0 5px;
-    font-size: 25px;
-    cursor: pointer;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 5px;
+  font-size: 25px;
+  cursor: pointer;
 }
 
-.sub_slider {
+.product_list h2 {
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 10px;
+  margin: 0 0 10px 0;
+}
+
+.product_list p {
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0 0 50px 0;
+}
+
+.product_list {
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.product_list .product_slider {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.product_list .product_slider figure {
+  padding: 0 15px;
+}
+
+.product_list i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 중앙정렬하는방법 */
+  transform: translate(-50%, -50%);
+  background: #333;
+  padding: 15px;
+  color: #fff;
+  font-size: 40px;
+}
+
+.product_list .s_left {
+  margin: 0 0 0 -650px;
+}
+
+.product_list .s_right {
+  margin: 0 0 0 650px;
+}
+
+.product_list .slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 30px 0 0 0 ;
+
+}
+
+.product_list .slick-dots li {
+  width:  10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.product_list .slick-dots li.slick-active {
+  background: #f00;
+}
+
+.product_list .slick-dots button {
+  display: none;
+}
+
+.product_list .box {
+  margin: 0 0 20px 0;
+}
+
+.product_list figure img {
+  transition: 0.3s;
+  border-radius: 50%;
+  padding: 20px 0;
+}
+.product_list figure.slick-center img {
+  transform: scale(1.25);
+  border-radius: 0;
+
+}
+
+.product_list small {
+  position:relative;
+  display:inline-block;
+  border-top: 30px solid #f00;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #f00;
+  border-left: 100px solid #f00;
+  width:0;
+  height: 0;
+}
+
+.product_list span {
+  position: absolute;
+  top: -10px;
+  left: -80px;
+  color: #fff;
+}
+
+.tab {
+  padding: 100px 0;
+  background: #f7f7f7;
+}
+
+.tab .container {
+  gap:40px;
+}
+
+.tab .tab_wrap {
+  flex: 1;
+
+}
+
+.tab_link {
+  display: flex;
+  border: 1px solid #ddd;
+}
+
+.tab_link>li {
+  flex:1;
+  background: #333;
+  color:#fff;
+  padding: 10px 15px;
+  cursor: pointer;
+
+}
+
+.tab_link>li.on {
+  background: #f00;
+}
+
+.tab_link>li~li {
+  border-left: 1px solid #ddd;
+}
+
+.tab figure {
+  flex: 1;
+  
+}
+
+.tab_content>li {
+  display: none;
+
+}
+
+.tab_content>li.on {
+  display:block;
+
+}
+
+.tab_content>li dd {
+  display: flex;
+  justify-content: space-between;
+  line-height: 36px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab_content>li dd strong {
+  width: 480px;
+  white-space: nowrap;  /*줄바꿈 방지 태그*/
+  overflow: hidden; /* 넘치면 숨기는테그*/
+  text-overflow: ellipsis; /*넘침 글자 ...으로 표시하는 태그*/
+
+  /* 글이길때 뒤에 ...으로 짜르는 방법 
+  넓이를 지정해줘야함 */
+}
+
+.footer {
+  background: #333;
+  padding: 0 0 50px 0;
+  color: #fff;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.footer hr {
+  border: none;
+  border-top: 1px solid #666;
+  margin: 0;
+}
+
+.footer .container {
+  justify-content: space-between;
+  line-height: 60px;
+}
+
+.footer .footer_top ul {
+  display: flex;
+}
+
+.footer .footer_top ul li~li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: #ddd;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
+.footer .footer_top .sns {
+  font-size: 0;
+  /* 아이콘 사이 공간없이 붙이는 방법: 부모태그에 폰트사이즈 0 주면 됨 */
+}
+
+.footer .footer_top i {
+  padding: 10px;
+  background: #111;
+  font-size: 21px;
+  margin: 0 2px;
+  vertical-align: middle;
+
+}
+
+.footer #link {
+  background: #555;
+  font-size: 17px;
+  text-transform: uppercase;/* 대문자로 바꾸는 태그 */
+  color: #fff;
+  padding: 5px 15px;
+  outline: 1px solid rgb(107, 106, 106)
+  
+}
+
+
+
+
+
+
+
+/* .sub_slider { 
     position: relative;
     width: 1200px;
     text-align: center;
@@ -433,9 +667,7 @@ nav > ul > li ~ li::before {
     font-size: 40px;
     padding: 11px;
     border-radius: 50%;
-}
-
-
+} */
 
 /* .sub_visual i { 
     width: ;
@@ -446,7 +678,6 @@ nav > ul > li ~ li::before {
     border-radius: 50%;
     vertical-align: middle;
 }*/
-  
 
 /* .middel { 
   text-align: center;
