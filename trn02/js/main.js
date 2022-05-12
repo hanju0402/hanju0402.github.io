@@ -98,6 +98,12 @@ $(function(){
         
     })
 
+    $('.mbtn').on('click', function(){
+        $('nav').toggleClass('on');
+        $(this).toggleClass('is-active');
+        
+    })
+
 
 
 
