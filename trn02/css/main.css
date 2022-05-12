@@ -13,10 +13,29 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: auto;
+    flex-direction: column;
+    padding: 0 15px;
+
+  }
+  h2 {
+    padding: 0 15px
+  }
+
+  p {
+    padding: 0 15px;
+    line-height: 1.618;
+  }
+}
+
 .top_banner {
   padding: 25px 0;
   background: #f1f1f1;
 }
+
+
 
 .top_banner .container {
   display: block;
@@ -50,6 +69,44 @@ body {
   cursor: pointer;
 }
 
+
+
+@media (max-width: 768px) {
+
+
+.top_banner {
+  position: absolute;
+  top: 150px;
+  left: 15px;
+  right: 15px;
+  padding: 25px 15px;
+  z-index: 999;
+}
+
+.top_banner h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.top_banner p {
+  font-size: 13px;
+  line-height: 1.56;
+  margin: 20px 0 0 0;
+}
+
+.top_banner a {
+  padding: 0px 15px 4px 15px;
+  border: 1px solid #333;
+  margin: 20px 0 0 0;
+  display: block;
+  width: 100px
+}
+
+
+
+
+}
+
 .header .gnb {
   line-height: 100px;
 }
@@ -62,6 +119,30 @@ body {
   margin: 0 0 0 50px;
 }
 
+.header .mbtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+
+  .header h1 {
+    padding: 0 15px;
+
+  }
+
+  .header .mbtn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    line-height: 1;
+    background: #ddd;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+}
 nav > ul {
   display: flex;
   /* gap: 40px */
@@ -89,6 +170,49 @@ nav > ul > li ~ li::before {
   outline: none;
   background: transparent;
   font-size: 30px;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: calc(100% - 90px);
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #333;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+
+  nav.on {
+    left: 0;
+  }
+
+  nav>ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    padding: 100px 30px;
+  }
+
+  nav>ul>li {
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav>ul>li>a {
+    display: block;
+  }
+  
+  nav > ul > li ~ li::before {
+    display: none;
+  }
+  
+  #searchForm {
+    display: none;
+  }
+
 }
 
 .main_visual figure {
@@ -211,6 +335,126 @@ nav > ul > li ~ li::before {
 
 .main_visual .slick-dots button {
   display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .main_visual {
+    position: relative;
+  }
+
+
+  .main_visual figure {
+    position: relative;
+    height: calc(100vh -100px);
+  }
+  
+  .main_visual .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat left center/cover;
+  }
+  .main_visual .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat right center/cover;
+  }
+  .main_visual .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat right center/cover;
+  }
+  
+  .main_visual .container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    right: 15px;
+    transform: translate(0, -50%);
+    color: #fff;
+  }
+  
+  .main_visual figure h3 {
+    font-size: 5.5vw;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 2px #000;
+    /* 우측 아래 흐리게(블러) */
+  }
+  
+  .main_visual figure.itm02 h3 {
+    color: #fff;
+    text-shadow: 0 0 2px #333;
+  }
+  
+  .main_visual figure p {
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    padding: 0 0;
+  }
+  
+  .main_visual figure.itm02 p {
+    color: #fff;
+  }
+  
+  .main_visual figure a {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid #fff;
+    background: #333;
+    padding: 5px 20px 8px 20px;
+  }
+  
+  .main_visual figure h3 {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  
+  .main_visual figure.on h3 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .main_visual figure p {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  
+  .main_visual figure.on p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+  }
+  
+  .main_visual figure a {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  
+  .main_visual figure.on a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1s;
+  }
+  
+  .main_visual .slick-dots {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .main_visual .slick-dots li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    margin: 0 2px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+
 }
 
 .basic {
